@@ -7,9 +7,16 @@
     <title>Tic-Tac-Toe v2</title>
 
     <style type="text/css">
-        body{
+        body {
             margin: 100px;
-            max-width: 1600px;
+            /* max-width: 1600px; */
+        }
+
+        h1{
+            text-align: center;
+            font-size: 4rem;
+            color: #3E63E6;
+            font-weight: 700;
         }
         .wrapper {
             display: grid;
@@ -23,6 +30,7 @@
             width: 150px;
             height: 150px;
             border: solid 1px black;
+            border-radius: 25px;
             justify-content: center;
             align-items: center;
             font-size: 80px;
@@ -33,20 +41,43 @@
             background-color: #3E63E6;
             color: #FFF;
         }
+
+        #turn,
+        #gameStatus {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 1.5rem;
+            text-align: center;
+            font-size: 2rem;
+            width: 400px;
+            border: solid 1px black;
+            border-radius: 25px;
+            color:  #3E63E6;
+            font-weight: bold;
+        }
+
+        #gameStatus{
+            color: black;
+        }
     </style>
-    
+
 </head>
 
 <body>
-    <div class = "wrapper">
-    <script>
-        const NUM_SQUARES = 9;
-        for (i = 0; i < NUM_SQUARES; i++) {
-            id = "sq" + i;
-            document.write("<div class='square' id='" + id + "'></div>");
-        }
-    </script>
+    <header>
+        <h1> Tic-Tac-Toe </h1>
+    </header>
+    <div class="wrapper">
+        <script>
+            const NUM_SQUARES = 9;
+            for (i = 0; i < NUM_SQUARES; i++) {
+                id = "sq" + i;
+                document.write("<div class='square' id='" + id + "'></div>");
+            }
+        </script>
     </div>
+    <div id="turn"> It's X's Turn </div>
+    <div id="gameStatus"> Tie Game - No Winner </div>
 </body>
 
 </html>
