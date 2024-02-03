@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic-Tac-Toe v1</title>
+    <title>Tic-Tac-Toe v2</title>
 
     <style type="text/css">
         body{
@@ -34,21 +34,18 @@
             color: #FFF;
         }
     </style>
+    
 </head>
 
 <body>
-    <!-- put a wrapper around the 9 boxes to create the desired layout -->
-    <div class="wrapper">
-        <!-- manually add 9 divs to create the boxes and place an X in 2 of them and an O in another -->
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"> X </div>
-        <div class="square"> X </div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"> O </div>
+    <div class = "wrapper">
+    <script>
+        const NUM_SQUARES = 9;
+        for (i = 0; i < NUM_SQUARES; i++) {
+            id = "sq" + i;
+            document.write("<div class='square' id='" + id + "'></div>");
+        }
+    </script>
     </div>
 </body>
 
